@@ -1,0 +1,33 @@
+{% load bootstrap4 %} <!--carregando bootstrap4 no arquivo produto.html-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUTO</title>
+    {% bootstrap_css %} <!-- carregando css da pagina-->
+</head>
+<body>
+    <div class="container">
+        <H1>PRODUTO</H1>
+        {% bootstrap_messages %} <!--mensagens de sucesso ou de falha, caso tiver-->
+
+        <form action="{% url 'produto' %}" method="post" class="form" autocomplete="off" enctype="multipart/form-data"> 
+            
+            <!--enctype serve para quando o programa for fazer upload-->
+            {% csrf_token %}
+
+
+
+            {% bootstrap_form form %} <!-- aplica o padrão form do bootstrap no formulário -->
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            {% endbuttons %}
+        </form>
+    </div>
+    
+
+{% bootstrap_javascript jquery='full' %} <!--carregando javascript com jquery-->
+</body>
+</html>

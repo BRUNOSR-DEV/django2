@@ -1,0 +1,32 @@
+{% load bootstrap4 %} <!-- import do boostrap (arquivos css e js) -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTATO</title>
+    {% bootstrap_css %}
+
+</head>
+<body>
+    <div class="container">
+    <h1>CONTATO</h1>
+    {% bootstrap_messages %}
+
+        <form action="{% url 'contato' %}" method="post" class="form" autocomplete="off">
+            {% csrf_token %} <!-- gera um token no formulário,cada novo formulário é um token diferente - Necessario-->
+
+            {% bootstrap_form form %} <!-- aplica css e js no form-->
+            {% buttons %}
+                <button type="submit" class="btn btn-primary"> Enviar Menssagem</button>
+            {% endbuttons %}
+
+        </form>
+
+    </div>
+    
+
+    {% bootstrap_javascript jquery='full' %}
+</body>
+</html>

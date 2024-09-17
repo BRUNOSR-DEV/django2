@@ -1,0 +1,53 @@
+No terminal (sempre no ambiente virtual)
+
+Para se criar um projeto Django, no terminal:
+"pip install whitenoise gunicorn django-bootstrap4 PyMySQL django-stdimage"
+
+        Observações:
+    whitenoise - Usado para publicação do projeto na internet, ele apresenta os arquivos estáticos.
+
+    gunicorn - Utilizado para rodar o nosso servidor, substitui o runserver do django, feito para rodar app python
+
+    django-bootstrap4 - app front-end, para facilitar...
+
+    PyMySQL - driver de conexão com o Banco de dados mysql e python
+
+    django-stdimage - app que facilita trabalhar com imagem no projeto django
+
+    No terminal:
+    "pip freeze > requirements.txt" 
+
+        - Arquivo que lista todos apps/bibliotecas que estão sendo usadas no projeto django
+
+    No terminal:
+    "django-admin startproject django2 ."
+
+        observação:
+
+        - Criação/ativação do projeto django
+        - No final da linha de código tem um ponto (.), ele serve para que não se crie um novo diretório repetido.
+
+    No terminal:
+    "django-admin startapp core"
+
+        - Criação/ativação do app x (core)
+
+    No terminal:
+    "py manage.py  migrate"
+        - aplica todas as migrates no bd ( cria as tabelas django no banco dados)
+
+    No terminal:
+    "python manage.py createsuperuser"
+        - Para se criar um usuário adm 
+    
+    No terminal:
+    "py manage.py runserver"
+        - Para executar o programa django    
+
+    No terminal:
+    "py manage.py makemigrations"
+        - Depois de fazer novos models é necessario fazer migrates    
+
+        No terminal:
+    "py manage.py  migrate"
+        - aplica todas as migrates no bd ( cria as tabelas django no banco dados)  
